@@ -1,7 +1,26 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { copyFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
+import tailwindcss from '@tailwindcss/vite';
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
 
-// https://vitejs.dev/config/
+const notFoundPage = () => {
+  let outDir;
+  return {
+    name: 'not-found-page',
+    apply: 'build',
+    configResolved(config) {
+      outDir = resolve(config.root, config.build.outDir);
+    },
+    async closeBundle() {
+      await copyFile(
+        resolve(outDir, 'index.html'),
+        resolve(outDir, '404.html'),
+      );
+    },
+  };
+};
+
 export default defineConfig({
-  plugins: [react()],
-})
+  plugins: [react(), tailwindcss(), notFoundPage()],
+});
