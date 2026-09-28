@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import Captions from './components/Captions.jsx';
 import Kept from './components/Kept.jsx';
 import Sheet from './components/Sheet.jsx';
+import SiteFooter from './components/SiteFooter.jsx';
 import Stage from './components/Stage.jsx';
 import Templates from './components/Templates.jsx';
 import Toaster from './components/Toaster.jsx';
@@ -189,30 +190,7 @@ export default function App() {
         <Stage onFile={openFile} hidden={!!wanted} />
         <Captions hidden={!!wanted} />
 
-        <footer className="on-mat flex justify-center gap-4 text-on-mat text-xs [grid-area:foot] md:justify-between">
-          <span>
-            Templates from{' '}
-            <a
-              className="text-paper underline underline-offset-2"
-              href="https://imgflip.com/memetemplates"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Imgflip
-            </a>
-          </span>
-          <span>
-            Made by{' '}
-            <a
-              className="text-paper underline underline-offset-2"
-              href="https://ashwin.co.in"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Ashwin
-            </a>
-          </span>
-        </footer>
+        <SiteFooter className="[grid-area:foot]" />
       </div>
 
       <Sheet
