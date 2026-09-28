@@ -68,6 +68,7 @@ export default function Templates({ onPick, onUpload, scrollClass = '' }) {
             type="button"
             className="btn ring-hover press w-10 px-0"
             aria-label="Random template"
+            data-tip="Random template"
             onClick={shuffle}
             disabled={!list.length}
           >

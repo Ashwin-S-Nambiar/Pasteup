@@ -157,6 +157,7 @@ export default function App() {
             data-sfx="none"
             className="btn press ring-hover w-10 px-0"
             aria-label={sound ? 'Mute sounds' : 'Turn sounds on'}
+            data-tip={sound ? 'Mute' : 'Sound on'}
             aria-pressed={!sound}
             onClick={() => {
               soundStore.set(!sound);
