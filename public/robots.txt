@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pasteup.ashwin.co.in/sitemap.xml
