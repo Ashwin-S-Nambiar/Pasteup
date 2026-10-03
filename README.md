@@ -9,7 +9,7 @@
   &nbsp;·&nbsp;
   <a href="#what-it-does">what it does</a>
   &nbsp;·&nbsp;
-  <a href="#drawn-in-the-browser">how it draws</a>
+  <a href="#the-design">the design</a>
   &nbsp;·&nbsp;
   <a href="#running-it">running it</a>
 </p>
@@ -69,6 +69,7 @@ the page is a cutting mat, the green self-healing kind with a printed grid, beca
 - **type.** anton, the free cousin of impact, for the name and the captions. schibsted grotesk for everything else, and jetbrains mono for small numbers.
 - **no dark mode.** the mat is already a mid green, and a meme looks the same either way, so there is no toggle.
 - **one screen, every screen.** from a 320 px phone to a 2560 px monitor, portrait or landscape, it all fits without scrolling the page. phones stack the meme over the captions, landscape phones put them side by side, tablets add the templates as a sheet, and wide screens show all three columns.
+- **quiet controls.** icon buttons that need an explanation show a tooltip on hover or keyboard focus, kept out of the way on touch.
 - **nothing jumps.** fonts are self-hosted and preloaded with metric-matched fallbacks, the meme sits in a fixed box, and layout shift measures 0, even when a template link loads.
 - **quiet motion.** sheets slide up and drag down to dismiss, captions fade in when added, buttons press in a little, and reduced motion turns it all off.
 
@@ -97,6 +98,10 @@ npm run dev
 
 then open http://localhost:5173. `npm run check` runs biome, and `npm run build` writes `dist/` with a matching `404.html`.
 
+### hosting and indexing
+
+production indexing is configured for `pasteup.ashwin.co.in`; vercel sends `noindex, nofollow` on other hosts, including preview deployments. `public/robots.txt` points to the homepage sitemap in `public/sitemap.xml`. if you deploy under another domain, update the indexing headers and site urls along with it.
+
 ## the shape of it
 
 ```
@@ -109,6 +114,7 @@ src/
     Kept.jsx          made here
     Sheet.jsx         bottom sheet with drag to dismiss
     Toaster.jsx       toasts
+    SiteFooter.jsx    shared credit and source links, including the 404
     NotFound.jsx      the 404
   lib/
     meme.js           layout and drawing
@@ -118,6 +124,7 @@ src/
     db.js             indexeddb
     sound.js          web audio
     store.js          tiny stores, toasts and haptics
+    tip.js            tooltips for icon buttons
 public/fonts/         anton, schibsted grotesk and jetbrains mono
 ```
 
