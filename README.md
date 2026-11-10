@@ -75,17 +75,17 @@ the page is a cutting mat, the green self-healing kind with a printed grid, beca
 
 ## the stack
 
-| layer | choices |
-| --- | --- |
-| ui | [react 19](https://react.dev) and [vite 8](https://vite.dev) |
-| style | [tailwind css 4](https://tailwindcss.com) |
-| motion | [motion](https://motion.dev) for sheets, toasts and the caption list |
-| drawing | the canvas 2d api |
-| data | [imgflip](https://imgflip.com/api) for templates |
-| type | [anton](https://fonts.google.com/specimen/Anton), [schibsted grotesk](https://fonts.google.com/specimen/Schibsted+Grotesk) and [jetbrains mono](https://www.jetbrains.com/lp/mono/), self-hosted |
-| icons | [lucide](https://lucide.dev) |
-| lint and format | [biome](https://biomejs.dev) |
-| hosting | [vercel](https://vercel.com/) |
+| layer           | choices                                                                                                                                                                                          |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ui              | [react 19](https://react.dev) and [vite 8](https://vite.dev)                                                                                                                                     |
+| style           | [tailwind css 4](https://tailwindcss.com)                                                                                                                                                        |
+| motion          | [motion](https://motion.dev) for sheets, toasts and the caption list                                                                                                                             |
+| drawing         | the canvas 2d api                                                                                                                                                                                |
+| data            | [imgflip](https://imgflip.com/api) for templates                                                                                                                                                 |
+| type            | [anton](https://fonts.google.com/specimen/Anton), [schibsted grotesk](https://fonts.google.com/specimen/Schibsted+Grotesk) and [jetbrains mono](https://www.jetbrains.com/lp/mono/), self-hosted |
+| icons           | [lucide](https://lucide.dev)                                                                                                                                                                     |
+| lint and format | [biome](https://biomejs.dev)                                                                                                                                                                     |
+| hosting         | [vercel](https://vercel.com/)                                                                                                                                                                    |
 
 ## running it
 
